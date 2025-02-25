@@ -13,18 +13,20 @@ import java.util.List;
  */
 public class Biblioteca {
 
-    // TODO: Documentar estos atributos
-    /** Lista de libros disponibles en la biblioteca */
+    /* Comentario: Defino el atributo (privado y constante porque es final, es decir, no cambia)
+     * que es una lista de libros disponibles en la biblioteca */
+    /**
+     * Lista de libros disponibles en la biblioteca
+     * */
     private final List<Libro> libros;
 
-    // TODO: Documentar este método
     /** Constructor por defecto de la biblioteca sin libros */
+    //Es constructor por defecto porque no recibe parametros
     public Biblioteca() {
         libros = new ArrayList<>();
     }
 
-    // TODO: Documentar este método.
-    //  Test: NO HAY QUE TESTEAR ESTE METODO
+    //Si recibe paramentros los tenemos de documentar con @param
     /** Constructor con parámetros.
      *
      * @param libros Lista de libros con la que se iniciliza la biblioteca
@@ -33,15 +35,15 @@ public class Biblioteca {
         this.libros = libros;
     }
 
-    // TODO: Documentar este metodo
-    //  Test: Comprobar si se ha agregado
+
     /**
      * Agrega un libro a la biblioteca
      * @param libro Un libro para agregar
-     *
+     * @see Libro
      * @return {@code true} si el libro se ha agregado correctamente o {@code false} si el libro NO se ha agregado
      * correctamente
      */
+    //@see Libro se refiere a la clase no al paramentro
     public boolean agregarLibro(Libro libro) {
         return libros.add(libro);
     }
